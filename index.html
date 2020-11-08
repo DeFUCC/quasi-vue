@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quasi</title>
+    <link rel="stylesheet" href="css/style.css"> 
+    <script src="js/assets/quasi-svg.min.js"></script>
+    <!-- https://github.com/darobin/quasi -->
+    <script src="js/assets/vue.global.js"></script>
+    
+</head>
+<body>
+    <div id="quasi-app">
+        <div id="menu">
+            <div>
+                <label for="rotate">Rotate</label>
+                <input type="checkbox" name="rotate" id="rotate" v-model="options.rotate">
+            </div>
+            <div>
+                <label for="lines">Lines</label>
+                <input type="range" id="lines" name="lines"
+                       min="30" max="200" v-model="options.lines">
+              </div>
+            <button @click="save()">save</button>
+            <button @click="generate()">generate</button>
+        </div>
+        
+        <div id="quasi" v-html="svg"></div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>
