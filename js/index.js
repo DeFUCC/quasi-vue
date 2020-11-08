@@ -3,8 +3,8 @@ const QuasiApp = Vue.createApp({
     const svg = Vue.ref('')
 
     const options = Vue.reactive({
-      size: 10,
-      fillPolygons: false,
+      size: 100,
+      fillPolygons: true,
       fillColor: true,
       rotate: true,
       magnify: 0.8,
@@ -12,16 +12,12 @@ const QuasiApp = Vue.createApp({
       fatMidpoint: 0,
       symmetry: 5,
       lines: 60,
-      strokeWidth: 0.001,
+      strokeWidth: 0.01,
       color: false,
     })
 
-    function generate(opt) {
-      svg.value = Quasi.svg(options)
-    }
-
     Vue.watchEffect(() => {
-      generate(options)
+      svg.value = Quasi.svg(options)
     })
 
     function save() {
@@ -31,7 +27,6 @@ const QuasiApp = Vue.createApp({
     return {
       save,
       svg,
-      generate,
       options,
     }
   },

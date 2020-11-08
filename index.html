@@ -18,12 +18,39 @@
                 <input type="checkbox" name="rotate" id="rotate" v-model="options.rotate">
             </div>
             <div>
-                <label for="lines">Lines</label>
-                <input type="range" id="lines" name="lines"
-                       min="30" max="200" v-model="options.lines">
-              </div>
+                <label for="zoom">Zoom {{options.magnify}}</label>
+                <input type="range" id="zoom" name="zoom" step="0.05"
+                       min="0.5" max="2" v-model="options.magnify">
+            </div>
+            <div>
+                <label for="symmetry">Symmetry {{options.symmetry}}</label>
+                <input type="range" id="symmetry" name="symmetry" step="1"
+                       min="5" max="21" v-model="options.symmetry">
+            </div>
+            <div>
+                <label for="fill">Fill</label>
+                <input type="checkbox" name="fill" id="fill" v-model="options.fillPolygons">
+            </div>
+            <div>
+                <label for="fillColor">FillColor</label>
+                <input type="checkbox" name="fillColor" id="fillColor" v-model="options.fillColor">
+            </div>
+            <div>
+                <label for="stroke">Stroke {{options.strokeWidth}}</label>
+                <input type="range" id="stroke" name="stroke" step="0.01"
+                       min="0.01" max="0.5" v-model="options.strokeWidth">
+            </div>
+            <div>
+                <label for="skinny">Skinny {{options.skinnyMidpoint}}</label>
+                <input type="range" id="skinny" name="skinny" step="1"
+                       min="0" max="6" v-model="options.skinnyMidpoint">
+            </div>
+            <div>
+                <label for="fat">Fat {{options.fatMidpoint}}</label>
+                <input type="range" id="fat" name="fat" step="1"
+                       min="0" max="6" v-model="options.fatMidpoint">
+            </div>
             <button @click="save()">save</button>
-            <button @click="generate()">generate</button>
         </div>
         
         <div id="quasi" v-html="svg"></div>
