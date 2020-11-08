@@ -2,6 +2,11 @@
 
 A Vue 3 adaptation of an old JS port of C algorythm for generating various quasicrystallic structures and rendering them to SVG. Added some controls to manipulate the result and a function of downloading the final SVG.
 
+------
+
+https://github.com/darobin/quasi - original repo
+
+
 ## quasi-svg — SVG quasicrystals in JS
 
 
@@ -12,10 +17,7 @@ I made a few modifications, including supporting SVG output in addition to PostS
 the heart of the generator is a straight port. As such, it has a certain amount of undocumented
 magic (it also looks a lot more like C than the usual JS).
 
-It should be relatively straightforward to add canvas support as well. If you're interested and have
-questions, don't hesitate to contact me.
-
-You can then call `Quasi.svg()` with some options.
+Call `Quasi.svg()` with some options.
 
 ## API
 
