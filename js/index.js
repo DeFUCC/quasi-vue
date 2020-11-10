@@ -3,7 +3,7 @@ const QuasiApp = Vue.createApp({
     const svg = Vue.ref('')
 
     const options = Vue.reactive({
-      size: 100,
+      size: 1000,
       fillPolygons: true,
       fillColor: true,
       rotate: true,
